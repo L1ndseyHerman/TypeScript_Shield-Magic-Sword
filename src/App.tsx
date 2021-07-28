@@ -171,20 +171,28 @@ function App()
 
   const [playerOneElement, setPlayerOneElement] = useState("None Yet");
   const [computerElement, setComputerElement] = useState("None Yet");
+
+
   //  Wheat is the default button color in index.css, so I'm using it as the default color here too.
   const [playerOneElementColor, setPlayerOneElementColor] = useState("wheat");
   const [computerElementColor, setComputerElementColor] = useState("wheat");
 
   const [playerOneChoice, setPlayerOneChoice] = useState("First Turn");
-  const [computerChoice, setComputerChoice] = useState("First Turn");
+  //const [computerChoice, setComputerChoice] = useState("First Turn");
+  var computerChoice = "First Turn";
   const [disabledButtons, setDisabledButtons] = useState([false, false, false]);
   var playerOneHealth = 20;
   var computerHealth = 20;
-  const[playerOneCharacterTypeText, setPlayerOneCharacterTypeText] = useState("");
-  const[playerOneElementalBonusText, setPlayerOneElementalBonusText] = useState("");
-  const[computerCharacterTypeText, setComputerCharacterTypeText] = useState("");
-  const[computerElementalBonusText, setComputerElementalBonusText] = useState("");
-  const[winLooseTieText, setWinLooseTieText] = useState("");
+  //const[playerOneCharacterTypeText, setPlayerOneCharacterTypeText] = useState("");
+  //const[playerOneElementalBonusText, setPlayerOneElementalBonusText] = useState("");
+  //const[computerCharacterTypeText, setComputerCharacterTypeText] = useState("");
+  //const[computerElementalBonusText, setComputerElementalBonusText] = useState("");
+  //const[winLooseTieText, setWinLooseTieText] = useState("");
+  var playerOneCharacterTypeText = "";
+  var playerOneElementalBonusText = "";
+  var computerCharacterTypeText = "";
+  var computerElementalBonusText = "";
+  var winLooseTieText = "";
 
   const [isNotNewGame, setIsNotNewGame] = useState(true);
   var buttonsAndExplanationsDivDisplay = "block";
@@ -199,7 +207,8 @@ function App()
 
   if (playerOneChoice !== "First Turn") 
   {
-    setComputerChoice(makeComputerChoice());
+    //setComputerChoice(makeComputerChoice());
+    computerChoice = makeComputerChoice();
 
     var playerOneHealthLost = checkThisPlayersHealthLost(playerOneChoice, computerChoice);
   
@@ -211,22 +220,22 @@ function App()
     {
       playerOneLoosesThisMuchHealthDueToComputerCharacterType = 
         playerOneLoosesThisMuchHealthDueToComputerCharacterType - 1;
-      setComputerCharacterTypeText(computerCharacterTypeText +
-        "(-1 Magic Damage because Player1 is a Bodyguard.) ");
+      computerCharacterTypeText = computerCharacterTypeText +
+        "(-1 Magic Damage because Player1 is a Bodyguard.) ";
     }
     if (computerChoice === "Magic" && computerCharacterType === "Mage")
     {
       playerOneLoosesThisMuchHealthDueToComputerCharacterType = 
         playerOneLoosesThisMuchHealthDueToComputerCharacterType + 1;
-      setComputerCharacterTypeText(computerCharacterTypeText +
-        "(+1 Magic Damage because Computer is a Mage.) ");
+      computerCharacterTypeText = computerCharacterTypeText +
+        "(+1 Magic Damage because Computer is a Mage.) ";
     }
     if (computerChoice === "Sword" && computerCharacterType === "Assassin")
     {
       playerOneLoosesThisMuchHealthDueToComputerCharacterType = 
         playerOneLoosesThisMuchHealthDueToComputerCharacterType + 1;
-      setComputerCharacterTypeText(computerCharacterTypeText +
-        "(+1 Physical Damage because Computer is an Assassin.) ");
+      computerCharacterTypeText = computerCharacterTypeText +
+        "(+1 Physical Damage because Computer is an Assassin.) ";
     }
 
     var computerElementalBonusDamage = 0;
@@ -241,7 +250,7 @@ function App()
     //var computerElementalBonusText = "";
     if (computerElementalBonusDamage > 0)
     {
-      setComputerElementalBonusText("(+1 bonus elemental damage)");
+      computerElementalBonusText = "(+1 bonus elemental damage)";
     }
 
     var computerHealthLost = checkThisPlayersHealthLost(computerChoice, playerOneChoice);
@@ -254,22 +263,22 @@ function App()
     {
       computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 
         computerLoosesThisMuchHealthDueToPlayerOneCharacterType - 1;
-      setPlayerOneCharacterTypeText(playerOneCharacterTypeText +
-        "(-1 Magic Damage because Computer is a Bodyguard.) ");
+      playerOneCharacterTypeText = playerOneCharacterTypeText +
+        "(-1 Magic Damage because Computer is a Bodyguard.) ";
     }
     if (playerOneChoice === "Magic" && playerOneCharacterType === "Mage")
     {
       computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 
         computerLoosesThisMuchHealthDueToPlayerOneCharacterType + 1;
-      setPlayerOneCharacterTypeText(playerOneCharacterTypeText +
-        "(+1 Magic Damage because Player1 is a Mage.) ");
+      playerOneCharacterTypeText = playerOneCharacterTypeText +
+        "(+1 Magic Damage because Player1 is a Mage.) ";
     }
     if (playerOneChoice === "Sword" && playerOneCharacterType === "Assassin")
     {
       computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 
         computerLoosesThisMuchHealthDueToPlayerOneCharacterType + 1;
-      setPlayerOneCharacterTypeText(playerOneCharacterTypeText +
-        "(+1 Physical Damage because Player1 is an Assassin.) ");
+      playerOneCharacterTypeText = playerOneCharacterTypeText +
+        "(+1 Physical Damage because Player1 is an Assassin.) ";
     }
 
     var playerOneElementalBonusDamage = 0;
@@ -283,11 +292,11 @@ function App()
     //var playerOneElementalBonusText = "";
     if (playerOneElementalBonusDamage > 0)
     {
-      setPlayerOneElementalBonusText("(+1 bonus elemental damage)");
+      playerOneElementalBonusText = "(+1 bonus elemental damage)";
     }
 
     //var winLooseTieText = checkWinLooseTie(playerOneHealth, computerHealth);
-    setWinLooseTieText(checkWinLooseTie(playerOneHealth, computerHealth));
+    winLooseTieText = checkWinLooseTie(playerOneHealth, computerHealth);
   }
 
   if ((playerOneHealth <= 0) || (computerHealth <= 0))
