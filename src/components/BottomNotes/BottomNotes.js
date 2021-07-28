@@ -9,7 +9,7 @@ function BottomNotes()
             <p>
                 If you are a software developer who wants to look at 
                 previous versions, you can go to
-                my <a href="https://github.com/L1ndseyHerman/New_Shield_Magic_Sword/">
+                my <a href="https://github.com/L1ndseyHerman/TypeScript_Shield-Magic-Sword">
                 GitHub</a>, change the branch from &quot;master&quot; to the version 
                 you are looking for, then pull the code and run it in VS Code.
             </p>
