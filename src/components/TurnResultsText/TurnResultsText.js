@@ -1,4 +1,4 @@
-function TurnResultsText(props) 
+function TurnResultsText(props)
 {
     if (props.playerOneChoice !== "First Turn")
     {

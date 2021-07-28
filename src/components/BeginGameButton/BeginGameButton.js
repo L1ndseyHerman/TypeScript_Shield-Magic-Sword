@@ -1,5 +1,5 @@
 
-function BeginGameButton(props)
+function BeginGameButton(props) 
 {
     const beginGameButtonPressed = () => {
        props.callback({screenName: "Character Type Selection Screen"}); 

@@ -16,7 +16,7 @@ import rightDarkMagicImage from '../../images/SmolRightMagicColorfulDark.png';
 import leftSwordImage from '../../images/SmolLeftSword.png';
 import rightSwordImage from '../../images/SmolRightSword.png';
 
-function PlayerInfoImage(props)
+function PlayerInfoImage(props) 
 {
     //  Same Shield image for left-facing and right-facing
     if (props.choice === "Shield")

@@ -1,4 +1,4 @@
-function ConstantPlayerInfo(props)
+function ConstantPlayerInfo(props) 
 {
     //  #testingPars are needed for Jest testing.
     return(

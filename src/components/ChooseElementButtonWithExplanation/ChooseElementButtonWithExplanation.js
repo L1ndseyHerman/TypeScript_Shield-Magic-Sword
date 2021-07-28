@@ -1,6 +1,6 @@
 import styles from './ChooseElementButtonWithExplanation.module.css';
 
-function ChooseElementButtonWithExplanation(props)
+function ChooseElementButtonWithExplanation(props) 
 {
     var playerOneElementColor = "wheat";
 

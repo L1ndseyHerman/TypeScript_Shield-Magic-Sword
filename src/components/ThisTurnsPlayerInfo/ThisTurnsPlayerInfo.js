@@ -1,6 +1,6 @@
 import PlayerInfoImage from "../PlayerInfoImage/PlayerInfoImage";
 
-function ThisTurnsPlayerInfo(props)
+function ThisTurnsPlayerInfo(props) 
 {
     return(
         <div style={{width: "150px", float: props.floatDirection}}>

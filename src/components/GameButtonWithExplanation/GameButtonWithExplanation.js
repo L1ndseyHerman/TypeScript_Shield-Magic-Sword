@@ -1,6 +1,6 @@
 import styles from './GameButtonWithExplanation.module.css';
 
-function GameButtonWithExplanation(props)
+function GameButtonWithExplanation(props) 
 {
     var theDisabledButtons = [false, false, false];
     var index;

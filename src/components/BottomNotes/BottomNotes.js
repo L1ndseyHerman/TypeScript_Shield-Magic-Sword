@@ -4,8 +4,7 @@ function BottomNotes()
         //  This is a "fragment", for if you don't want yet another div around a component.
         <>
             <p>
-                Done with Version 4.1, which was updating the Jest unit tests and 
-                cleaning up the code. Version 4.2 will be adding TypeScript!
+                Starting Version 4.2, which is adding TypeScript!
             </p>
             <p>
                 If you are a software developer who wants to look at 
@@ -26,7 +25,7 @@ function BottomNotes()
                 freeCodeCamp.org was helpful as well. 
             </p>
             <p>And check out <a href="https://l1ndseyherman.github.io/">My Other Website</a>.</p>
-            <footer>This is a React JS Progressive Web App. Updated 07/27/21</footer>
+            <footer>This is a React JS Progressive Web App. Updated 07/28/21</footer>
         </>
     );
 }

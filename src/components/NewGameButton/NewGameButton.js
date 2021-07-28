@@ -1,5 +1,5 @@
 
-function NewGameButton(props)
+function NewGameButton(props) 
 {
     const newGameButtonPressed = () => {
        props.callback({isNotNewGame: false, playerOneChoice: "First Turn", 

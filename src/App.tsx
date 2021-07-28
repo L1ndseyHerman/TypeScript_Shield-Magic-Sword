@@ -13,7 +13,7 @@ import ThisTurnsPlayerInfo from './components/ThisTurnsPlayerInfo/ThisTurnsPlaye
 import TurnResultsText from './components/TurnResultsText/TurnResultsText';
 import NewGameButton from './components/NewGameButton/NewGameButton';
  
-function makeComputerChoice()
+function makeComputerChoice() 
 {
   var computerNumber = Math.floor(Math.random() * 2); 
   var lastComputerChoice = String(sessionStorage.getItem("lastComputerChoice") || "An Error");

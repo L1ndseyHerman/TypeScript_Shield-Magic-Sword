@@ -1,6 +1,6 @@
 import styles from './ChooseCharacterTypeButtonWithExplanation.module.css';
 
-function ChooseCharacterTypeButtonWithExplanation(props)
+function ChooseCharacterTypeButtonWithExplanation(props) 
 {
 
     const computerCharacterTypeNumber = Math.floor(Math.random() * 3);
