@@ -1,7 +1,14 @@
 import styles from './ChooseCharacterTypeButtonWithExplanation.module.css';
 
-function ChooseCharacterTypeButtonWithExplanation(props) 
-{
+interface Props {
+    buttonColor: string;
+    buttonText: string; 
+    explanation: string;
+    callback: (arg0: {screenName: string, playerOneCharacterType: string,
+    computerCharacterType: string}) => void;
+}
+
+const ChooseCharacterTypeButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
     const computerCharacterTypeNumber = Math.floor(Math.random() * 3);
     var computerCharacterType = "None Yet";
@@ -28,7 +35,7 @@ function ChooseCharacterTypeButtonWithExplanation(props)
 
     return(
         <div className={styles.buttonWithExplanationDiv}>
-            <div class="centeredDivPerfectButtonSize">
+            <div className="centeredDivPerfectButtonSize">
                 <button style={{background: props.buttonColor}} 
                     onClick={() => {characterTypeButtonPressed()}}>
                     {props.buttonText}
@@ -39,6 +46,6 @@ function ChooseCharacterTypeButtonWithExplanation(props)
             </p>
         </div>
     );
-}
+};
 
 export default ChooseCharacterTypeButtonWithExplanation;
