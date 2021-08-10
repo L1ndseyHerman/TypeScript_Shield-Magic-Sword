@@ -4,22 +4,14 @@ import { act } from "react-dom/test-utils";
 
 import ChooseCharacterTypeButtonWithExplanation from "./ChooseCharacterTypeButtonWithExplanation";
 
-//  Let's see if there's something better than "any" to put here:
-//let container: any = null;
-//let container: HTMLElement = null;
 let container: HTMLElement = document.createElement("div");
 beforeEach(() => {
-  // setup a DOM element as a render target
-  //let container: HTMLElement = document.createElement("div");
-  //container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
-  //container = null;
 });
 
 it("renders Bodyguard button + explanation", () => {

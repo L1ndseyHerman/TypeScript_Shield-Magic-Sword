@@ -1,7 +1,22 @@
 import styles from './ChooseElementButtonWithExplanation.module.css';
 
-function ChooseElementButtonWithExplanation(props) 
-{
+interface Props {
+  /*buttonColor: string;
+  buttonText: string; 
+  explanation: string;
+  callback: (arg0: {screenName: string, playerOneCharacterType: string,
+  computerCharacterType: string}) => void;*/
+  buttonText: string;
+  explanation: string;
+  buttonColor: string;
+  explanationColor: string;
+  callback: (arg0: {screenName: string, playerOneElement: string, 
+  playerOneElementColor: string, computerElement: string,
+  computerElementColor: string}) => void;
+}
+
+const ChooseElementButtonWithExplanation: React.FC<Props> = (props: Props) => {
+
     var playerOneElementColor = "wheat";
 
     if (props.buttonText === "Fire")
@@ -75,7 +90,7 @@ function ChooseElementButtonWithExplanation(props)
 
     return(
         <div className={styles.elementButtonDiv}>
-            <div class="centeredDivPerfectButtonSize">
+            <div className="centeredDivPerfectButtonSize">
                 <button style={{background: props.buttonColor}} 
                     onClick={() => {chooseElementButtonPressed()}}>{props.buttonText}</button>
             </div>
@@ -85,6 +100,6 @@ function ChooseElementButtonWithExplanation(props)
             </p>
         </div>
     );
-}
+};
     
 export default ChooseElementButtonWithExplanation;
