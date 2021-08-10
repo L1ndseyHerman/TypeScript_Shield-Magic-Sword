@@ -160,9 +160,8 @@ function checkWinLooseTie(playerOneHealth: number, computerHealth: number)
   }
 }
 
-
-function App()
-{
+const App: React.FC = () => {
+//{
   //  Reordered these const/variables a little to be kind of in order of the screens they happen on? 
   const [screenName, setScreenName] = useState("Shield-Magic-Sword");
 
@@ -549,6 +548,6 @@ function App()
     </main>
   );
 
-}
+};
 
 export default App;

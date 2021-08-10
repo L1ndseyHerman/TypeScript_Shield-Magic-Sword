@@ -25,7 +25,7 @@ function BottomNotes()
                 freeCodeCamp.org was helpful as well. 
             </p>
             <p>And check out <a href="https://l1ndseyherman.github.io/">My Other Website</a>.</p>
-            <footer>This is a React JS Progressive Web App. Updated 07/28/21</footer>
+            <footer>This is a React JS Progressive Web App. Updated 08/10/21</footer>
         </>
     );
 }
