@@ -1,9 +1,6 @@
 import PlayerInfoImage from "../PlayerInfoImage/PlayerInfoImage";
 
 interface Props {
-    /*choice: string; 
-    floatDirection: any;
-    element: string;*/
     floatDirection: any;
     constantHealthText: string; 
     changingNumber: number; 

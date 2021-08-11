@@ -1,5 +1,16 @@
-function TurnResultsText(props)
-{
+interface Props {
+    playerOneElementColor: string;
+    playerOneChoice: string;
+    playerOneCharacterTypeText: string;
+    playerOneElementalBonusText: string;
+    computerElementColor: string;
+    computerChoice: string;
+    computerCharacterTypeText: string;
+    computerElementalBonusText: string;
+    winLooseTieText: string;
+}
+  
+const TurnResultsText: React.FC<Props> = (props: Props) => {
     if (props.playerOneChoice !== "First Turn")
     {
         return(
@@ -27,6 +38,6 @@ function TurnResultsText(props)
             <p/>
         )
     }
-}
+};
 
 export default TurnResultsText;
