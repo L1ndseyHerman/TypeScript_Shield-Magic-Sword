@@ -161,6 +161,13 @@ function checkWinLooseTie(playerOneHealth: number, computerHealth: number)
 }
 
 const App: React.FC = () => {
+  //  I would like to condense these useStates into a playerOne class useState and a 
+  //  computer class useState, but I have some useEffects that only change when 
+  //  three states change, and I think they would update anytime anything in the object 
+  //  does, right? Like I want a useState to get called when playerOneHealth changes, but 
+  //  not when playerOneCharaterType changes, but I think if they were in the same object,
+  //  the useEffect would get called when either one changes?
+
   //  Reordered these const/variables a little to be kind of in order of the screens they happen on? 
   const [screenName, setScreenName] = useState("Shield-Magic-Sword");
 
