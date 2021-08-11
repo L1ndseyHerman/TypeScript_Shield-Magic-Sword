@@ -3,7 +3,7 @@ import React from 'react';
 const BottomNotes: React.FC = () => {
     return(
         //  This is a "fragment", for if you don't want yet another div around a component.
-        <>
+        <> 
             <p>
                 Done with Version 4.2, which is adding TypeScript.
             </p>
