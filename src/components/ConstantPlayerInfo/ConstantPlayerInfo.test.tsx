@@ -4,7 +4,7 @@ import { act } from "react-dom/test-utils";
 
 import ConstantPlayerInfo from "./ConstantPlayerInfo";
 
-let container: HTMLElement = document.createElement("div");
+const container: HTMLElement = document.createElement("div");
 beforeEach(() => {
   document.body.appendChild(container);
 });
@@ -28,10 +28,10 @@ it("renders Player1 example", () => {
     />, container);
   });
   
-  expect(container.querySelector("div")!.style.float).toBe("left");
-  expect(container.querySelector("#testingPar1")!.textContent).toBe("Player1 element: Fire");
-  expect(container.querySelector("span")!.style.color).toBe("firebrick");
-  expect(container.querySelector("#testingPar2")!.textContent).toBe("Bodyguard");
+  expect(container.querySelector("div")?.style.float).toBe("left");
+  expect(container.querySelector("#testingPar1")?.textContent).toBe("Player1 element: Fire");
+  expect(container.querySelector("span")?.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingPar2")?.textContent).toBe("Bodyguard");
 
 });
 
@@ -47,10 +47,10 @@ it("renders Computer example", () => {
     />, container);
   });
   
-  expect(container.querySelector("div")!.style.float).toBe("right");
-  expect(container.querySelector("#testingPar1")!.textContent).toBe("Computer element: Fire");
-  expect(container.querySelector("span")!.style.color).toBe("firebrick");
-  expect(container.querySelector("#testingPar2")!.textContent).toBe("Bodyguard");
+  expect(container.querySelector("div")?.style.float).toBe("right");
+  expect(container.querySelector("#testingPar1")?.textContent).toBe("Computer element: Fire");
+  expect(container.querySelector("span")?.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingPar2")?.textContent).toBe("Bodyguard");
 
 });
 
@@ -66,10 +66,10 @@ it("renders Player1 different element", () => {
     />, container);
   });
   
-  expect(container.querySelector("div")!.style.float).toBe("left");
-  expect(container.querySelector("#testingPar1")!.textContent).toBe("Player1 element: Earth");
-  expect(container.querySelector("span")!.style.color).toBe("darkolivegreen");
-  expect(container.querySelector("#testingPar2")!.textContent).toBe("Bodyguard");
+  expect(container.querySelector("div")?.style.float).toBe("left");
+  expect(container.querySelector("#testingPar1")?.textContent).toBe("Player1 element: Earth");
+  expect(container.querySelector("span")?.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("#testingPar2")?.textContent).toBe("Bodyguard");
 
 });
 
@@ -85,9 +85,9 @@ it("renders Player1 different characterType", () => {
     />, container);
   });
   
-  expect(container.querySelector("div")!.style.float).toBe("left");
-  expect(container.querySelector("#testingPar1")!.textContent).toBe("Player1 element: Fire");
-  expect(container.querySelector("span")!.style.color).toBe("firebrick");
-  expect(container.querySelector("#testingPar2")!.textContent).toBe("Mage");
+  expect(container.querySelector("div")?.style.float).toBe("left");
+  expect(container.querySelector("#testingPar1")?.textContent).toBe("Player1 element: Fire");
+  expect(container.querySelector("span")?.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingPar2")?.textContent).toBe("Mage");
 
 });

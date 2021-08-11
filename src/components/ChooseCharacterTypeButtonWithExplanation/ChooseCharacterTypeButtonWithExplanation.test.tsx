@@ -23,27 +23,6 @@ it("renders Bodyguard button + explanation", () => {
         explanation="Block +1 Magic Damage when using Shield."
         callback={(arg0: {screenName: string, playerOneCharacterType: string,
           computerCharacterType: string}) => arg0}
-        /*callback={(arg0: {screenName: string, playerOneCharacterType: string,
-          computerCharacterType: string}) => void;}*/
-
-        /*callback={(arg0:  {screenName: "Element Selection Screen"; playerOneCharacterType: "Bodyguard";
-        computerCharacterType: "Bodyguard";}) => void}*/
-        /*callback={({screenName: "Element Selection Screen", playerOneCharacterType: "Bodyguard",
-        computerCharacterType: "Bodyguard"})}*/
-
-        /*callback={(arg0: {"screenName": "Element Selection Screen", playerOneCharacterType: "Bodyguard",
-        computerCharacterType: "Bodyguard"}) => void}*/
-
-        /*callback="{screenName: "Element Selection Screen", playerOneCharacterType: buttonText,
-        computerCharacterType: computerCharacterType}""*/
-        //callback={"Element Selection Screen", buttonText, computerCharacterType}
-        //callback={"Number":1}
-        //callback={"String", "String", "String"}
-        /*callback={
-          "screenName": string;
-          playerOneCharacterType: string;
-          computerCharacterType: string;
-      },*/
         />, container);
   });
   
@@ -51,8 +30,8 @@ it("renders Bodyguard button + explanation", () => {
   //  Now ESLint is saying to use "?" instead, bec it checks it during runtime instead of
   //    assuming you're right or something.
   expect(container.querySelector("button")?.style.background).toBe("darkolivegreen");
-  expect(container.querySelector("button")!.textContent).toBe("Bodyguard");
-  expect(container.querySelector("p")!.textContent).toBe("Block +1 Magic Damage when using Shield.");
+  expect(container.querySelector("button")?.textContent).toBe("Bodyguard");
+  expect(container.querySelector("p")?.textContent).toBe("Block +1 Magic Damage when using Shield.");
 
 });
 
@@ -63,12 +42,14 @@ it("renders Mage button + explanation", () => {
           buttonColor="royalblue"
           buttonText="Mage" 
           explanation="Deal +1 Magic Damage when using Magic." 
+          callback={(arg0: {screenName: string, playerOneCharacterType: string,
+            computerCharacterType: string}) => arg0}
       />, container);
     });
     
-    expect(container.querySelector("button")!.style.background).toBe("royalblue");
-    expect(container.querySelector("button")!.textContent).toBe("Mage");
-    expect(container.querySelector("p")!.textContent).toBe("Deal +1 Magic Damage when using Magic.");
+    expect(container.querySelector("button")?.style.background).toBe("royalblue");
+    expect(container.querySelector("button")?.textContent).toBe("Mage");
+    expect(container.querySelector("p")?.textContent).toBe("Deal +1 Magic Damage when using Magic.");
   
   });
 
@@ -79,11 +60,13 @@ it("renders Mage button + explanation", () => {
           buttonColor="firebrick"
           buttonText="Assassin" 
           explanation="Deal +1 Physical Damage when using Sword." 
+          callback={(arg0: {screenName: string, playerOneCharacterType: string,
+            computerCharacterType: string}) => arg0}
       />, container);
     });
     
-    expect(container.querySelector("button")!.style.background).toBe("firebrick");
-    expect(container.querySelector("button")!.textContent).toBe("Assassin");
-    expect(container.querySelector("p")!.textContent).toBe("Deal +1 Physical Damage when using Sword.");
+    expect(container.querySelector("button")?.style.background).toBe("firebrick");
+    expect(container.querySelector("button")?.textContent).toBe("Assassin");
+    expect(container.querySelector("p")?.textContent).toBe("Deal +1 Physical Damage when using Sword.");
   
   });

@@ -4,7 +4,7 @@ import { act } from "react-dom/test-utils";
 
 import ChooseElementButtonWithExplanation from "./ChooseElementButtonWithExplanation";
 
-let container: HTMLElement = document.createElement("div");
+const container: HTMLElement = document.createElement("div");
 beforeEach(() => {
   document.body.appendChild(container);
 });
@@ -22,13 +22,16 @@ it("renders Fire button + explanation", () => {
       explanation="Earth"
       buttonColor="firebrick" 
       explanationColor="darkolivegreen"
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0}
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Fire");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Earth.");
-  expect(container.querySelector("button")!.style.background).toBe("firebrick");
-  expect(container.querySelector("span")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("button")?.textContent).toBe("Fire");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Earth.");
+  expect(container.querySelector("button")?.style.background).toBe("firebrick");
+  expect(container.querySelector("span")?.style.color).toBe("darkolivegreen");
 
 });
 
@@ -39,14 +42,17 @@ it("renders Earth button + explanation", () => {
       buttonText="Earth" 
       explanation="Air"
       buttonColor="darkolivegreen" 
-      explanationColor="darkorange" 
+      explanationColor="darkorange"
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0} 
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Earth");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Air.");
-  expect(container.querySelector("button")!.style.background).toBe("darkolivegreen");
-  expect(container.querySelector("span")!.style.color).toBe("darkorange");
+  expect(container.querySelector("button")?.textContent).toBe("Earth");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Air.");
+  expect(container.querySelector("button")?.style.background).toBe("darkolivegreen");
+  expect(container.querySelector("span")?.style.color).toBe("darkorange");
 
 });
 
@@ -58,13 +64,16 @@ it("renders Air button + explanation", () => {
       explanation="Water"
       buttonColor="darkorange" 
       explanationColor="royalblue" 
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0}
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Air");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Water.");
-  expect(container.querySelector("button")!.style.background).toBe("darkorange");
-  expect(container.querySelector("span")!.style.color).toBe("royalblue");
+  expect(container.querySelector("button")?.textContent).toBe("Air");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Water.");
+  expect(container.querySelector("button")?.style.background).toBe("darkorange");
+  expect(container.querySelector("span")?.style.color).toBe("royalblue");
 
 });
 
@@ -76,13 +85,16 @@ it("renders Water button + explanation", () => {
       explanation="Fire"
       buttonColor="royalblue" 
       explanationColor="firebrick" 
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0}
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Water");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Fire.");
-  expect(container.querySelector("button")!.style.background).toBe("royalblue");
-  expect(container.querySelector("span")!.style.color).toBe("firebrick");
+  expect(container.querySelector("button")?.textContent).toBe("Water");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Fire.");
+  expect(container.querySelector("button")?.style.background).toBe("royalblue");
+  expect(container.querySelector("span")?.style.color).toBe("firebrick");
 
 });
 
@@ -94,13 +106,16 @@ it("renders Light button + explanation", () => {
       explanation="Dark"
       buttonColor="gold" 
       explanationColor="rebeccapurple" 
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0}
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Light");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Dark.");
-  expect(container.querySelector("button")!.style.background).toBe("gold");
-  expect(container.querySelector("span")!.style.color).toBe("rebeccapurple");
+  expect(container.querySelector("button")?.textContent).toBe("Light");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Dark.");
+  expect(container.querySelector("button")?.style.background).toBe("gold");
+  expect(container.querySelector("span")?.style.color).toBe("rebeccapurple");
 
 });
 
@@ -112,12 +127,15 @@ it("renders Dark button + explanation", () => {
       explanation="Light"
       buttonColor="rebeccapurple" 
       explanationColor="gold" 
+      callback={(arg0: {screenName: string, playerOneElement: string, 
+        playerOneElementColor: string, computerElement: string,
+        computerElementColor: string}) => arg0}
     />, container);
   });
   
-  expect(container.querySelector("button")!.textContent).toBe("Dark");
-  expect(container.querySelector("p")!.textContent).toBe("+1 damage to Light.");
-  expect(container.querySelector("button")!.style.background).toBe("rebeccapurple");
-  expect(container.querySelector("span")!.style.color).toBe("gold");
+  expect(container.querySelector("button")?.textContent).toBe("Dark");
+  expect(container.querySelector("p")?.textContent).toBe("+1 damage to Light.");
+  expect(container.querySelector("button")?.style.background).toBe("rebeccapurple");
+  expect(container.querySelector("span")?.style.color).toBe("gold");
 
 });
