@@ -1,16 +1,22 @@
 import styles from './GameButtonWithExplanation.module.css';
 
-function GameButtonWithExplanation(props) 
-{
+interface Props {
+    buttonColor: string;
+    buttonText: string;
+    explanation: string;
+    buttonNumber: string;
+    isDisabled: boolean; 
+    disabledButtonArray: boolean[];
+    callback: (arg0: {isNotNewGame: boolean, playerOneChoice: string, 
+        disabledButtons: boolean[], screenName: string}) => void
+}
+  
+const GameButtonWithExplanation: React.FC<Props> = (props: Props) => {
     var theDisabledButtons = [false, false, false];
     var index;
     for (index = 0; index < theDisabledButtons.length; index++) {
         
-        //  This will compare "0" to 0! Not sure why ESLint is giving "==" a warning, 
-        //  ppl use that a lot in JavaScript, right?
-
-        // eslint-disable-next-line 
-        if (index == props.buttonNumber)
+        if (index.toString() === props.buttonNumber)
         {
             theDisabledButtons[index] = true;
         }
@@ -27,7 +33,7 @@ function GameButtonWithExplanation(props)
 
     return(
         <div className={styles.buttonWithExplanationDiv}>
-            <div class="centeredDivPerfectButtonSize">
+            <div className="centeredDivPerfectButtonSize">
                 <button style={{background: props.buttonColor}} disabled={props.isDisabled} 
                     onClick={() => {buttonPressed()}}>{props.buttonText}</button>
             </div>
