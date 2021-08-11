@@ -4,18 +4,14 @@ import { act } from "react-dom/test-utils";
 
 import PlayerInfoImage from "./PlayerInfoImage";
 
-let container = null;
+let container: HTMLElement = document.createElement("div");
 beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
-  container = null;
 });
 
 //  I'm testing every combination for all 15 images here, because what if I accidentally delete 

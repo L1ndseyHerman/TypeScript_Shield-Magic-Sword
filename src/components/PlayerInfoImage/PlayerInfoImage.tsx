@@ -16,8 +16,13 @@ import rightDarkMagicImage from '../../images/SmolRightMagicColorfulDark.png';
 import leftSwordImage from '../../images/SmolLeftSword.png';
 import rightSwordImage from '../../images/SmolRightSword.png';
 
-function PlayerInfoImage(props) 
-{
+interface Props {
+    choice: string; 
+    floatDirection: any;
+    element: string;
+}
+  
+const PlayerInfoImage: React.FC<Props> = (props: Props) => {
     //  Same Shield image for left-facing and right-facing
     if (props.choice === "Shield")
     {
@@ -118,6 +123,6 @@ function PlayerInfoImage(props)
         //  Another fragment
         <></>
     );
-}
+};
     
 export default PlayerInfoImage;
