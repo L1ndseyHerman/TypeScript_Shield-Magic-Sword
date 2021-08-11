@@ -4,18 +4,14 @@ import { act } from "react-dom/test-utils";
 
 import ConstantPlayerInfo from "./ConstantPlayerInfo";
 
-let container = null;
+let container: HTMLElement = document.createElement("div");
 beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
-  container = null;
 });
 
 //  I didn't test every possible combination here, but I think this is a good 

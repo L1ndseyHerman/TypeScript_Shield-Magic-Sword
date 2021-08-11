@@ -1,11 +1,6 @@
 import styles from './ChooseElementButtonWithExplanation.module.css';
 
 interface Props {
-  /*buttonColor: string;
-  buttonText: string; 
-  explanation: string;
-  callback: (arg0: {screenName: string, playerOneCharacterType: string,
-  computerCharacterType: string}) => void;*/
   buttonText: string;
   explanation: string;
   buttonColor: string;
