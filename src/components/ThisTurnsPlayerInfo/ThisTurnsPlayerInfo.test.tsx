@@ -24,12 +24,12 @@ it("renders Player1 example", () => {
     render(<ThisTurnsPlayerInfo 
       floatDirection="left"
       constantHealthText="Player1 health: " 
-      changingNumber="10" 
+      changingNumber={10} 
     />, container);
   });
   
-  expect(container.querySelector("div").style.float).toBe("left");
-  expect(container.querySelector("p").textContent).toBe("Player1 health: 10");
+  expect(container.querySelector("div")!.style.float).toBe("left");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 health: 10");
 
 });
 
@@ -39,12 +39,12 @@ it("renders Computer example", () => {
     render(<ThisTurnsPlayerInfo 
       floatDirection="right"
       constantHealthText="Computer health: " 
-      changingNumber="10" 
+      changingNumber={10} 
     />, container);
   });
   
-  expect(container.querySelector("div").style.float).toBe("right");
-  expect(container.querySelector("p").textContent).toBe("Computer health: 10");
+  expect(container.querySelector("div")!.style.float).toBe("right");
+  expect(container.querySelector("p")!.textContent).toBe("Computer health: 10");
 
 });
 
@@ -54,11 +54,11 @@ it("renders Player1 different health", () => {
     render(<ThisTurnsPlayerInfo
       floatDirection="left"
       constantHealthText="Player1 health: " 
-      changingNumber="5"  
+      changingNumber={5}  
     />, container);
   });
   
-  expect(container.querySelector("div").style.float).toBe("left");
-  expect(container.querySelector("p").textContent).toBe("Player1 health: 5");
+  expect(container.querySelector("div")!.style.float).toBe("left");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 health: 5");
 
 });

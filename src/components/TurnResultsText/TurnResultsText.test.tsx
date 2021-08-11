@@ -30,9 +30,9 @@ it("renders TurnResultsText example", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
     "   and Computer chose Magic  . ");
 
 });
@@ -53,9 +53,9 @@ it("renders different playerOneElementColor", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("darkorange");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("darkorange");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
    "   and Computer chose Magic  . ");
 
 });
@@ -76,9 +76,9 @@ it("renders different computerElementColor", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("royalblue");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("royalblue");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
    "   and Computer chose Magic  . ");
 
 });
@@ -99,9 +99,9 @@ it("renders different playerOneChoice", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Sword" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Sword" +
    "   and Computer chose Magic  . ");
 
 });
@@ -122,9 +122,9 @@ it("renders different computerChoice", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
    "   and Computer chose Sword  . ");
 
 });
@@ -145,9 +145,9 @@ it("renders playerOneCharacterTypeText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
     " (+1 Magic Damage because Player1 is a Mage.)   and Computer chose Magic  . ");
 
 });
@@ -168,9 +168,9 @@ it("renders playerOneCharacterTypeText two parts", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
     " (-1 Magic Damage because Player1 is a Bodyguard.) (+1 Magic Damage because Player1 is a Mage.)" +
     "   and Computer chose Magic  . ");
 
@@ -192,9 +192,9 @@ it("renders computerCharacterTypeText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
     "   and Computer chose Magic (+1 Magic Damage because Computer is a Mage.)  . ");
 
 });
@@ -215,9 +215,9 @@ it("renders playerOneElementalBonusText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" + 
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" + 
   "  (+1 bonus elemental damage) and Computer chose Magic  . ");
 
 });
@@ -238,9 +238,9 @@ it("renders playerOneCharacterType and playerOneElementalBonusText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" + 
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" + 
   " (+1 Magic Damage because Player1 is a Mage.)  (+1 bonus elemental damage)" +
   " and Computer chose Magic  . ");
 
@@ -262,9 +262,9 @@ it("renders computerElementalBonusText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
    "   and Computer chose Magic  (+1 bonus elemental damage). ");
 
 });
@@ -285,9 +285,9 @@ it("renders winText", () => {
     />, container);
   });
   
-  expect(container.querySelector("#testingSpan1").style.color).toBe("firebrick");
-  expect(container.querySelector("#testingSpan2").style.color).toBe("darkolivegreen");
-  expect(container.querySelector("p").textContent).toBe("Player1 chose Shield" +
+  expect(container.querySelector("#testingSpan1")!.style.color).toBe("firebrick");
+  expect(container.querySelector("#testingSpan2")!.style.color).toBe("darkolivegreen");
+  expect(container.querySelector("p")!.textContent).toBe("Player1 chose Shield" +
    "   and Computer chose Magic  . Player1 wins!");
 
 });
@@ -299,6 +299,6 @@ it("renders the empty string, because Player1 has not taken a turn yet", () => {
     render(<TurnResultsText playerOneChoice="First Turn" />, container);
   });
 
-  expect(container.querySelector("p").textContent).toBe("");
+  expect(container.querySelector("p")!.textContent).toBe("");
 
 });

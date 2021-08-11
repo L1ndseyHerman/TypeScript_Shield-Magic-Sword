@@ -40,6 +40,6 @@ const GameButtonWithExplanation: React.FC<Props> = (props: Props) => {
             <p>{props.explanation}</p>
         </div>
     );
-}
+};
     
 export default GameButtonWithExplanation;

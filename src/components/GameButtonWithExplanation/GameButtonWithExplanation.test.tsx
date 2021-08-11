@@ -25,10 +25,10 @@ it("renders enabled Shield button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("darkolivegreen");
-  expect(container.querySelector("button").textContent).toBe("Shield");
-  expect(container.querySelector("p").textContent).toBe("Blocks two physical damage.");
-  expect(container.querySelector("button").disabled).toBe(false);
+  expect(container.querySelector("button")!.style.background).toBe("darkolivegreen");
+  expect(container.querySelector("button")!.textContent).toBe("Shield");
+  expect(container.querySelector("p")!.textContent).toBe("Blocks two physical damage.");
+  expect(container.querySelector("button")!.disabled).toBe(false);
 
 });
 
@@ -43,10 +43,10 @@ it("renders disabled Shield button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("darkolivegreen");
-  expect(container.querySelector("button").textContent).toBe("Shield");
-  expect(container.querySelector("p").textContent).toBe("Blocks two physical damage.");
-  expect(container.querySelector("button").disabled).toBe(true);
+  expect(container.querySelector("button")!.style.background).toBe("darkolivegreen");
+  expect(container.querySelector("button")!.textContent).toBe("Shield");
+  expect(container.querySelector("p")!.textContent).toBe("Blocks two physical damage.");
+  expect(container.querySelector("button")!.disabled).toBe(true);
 
 });
 
@@ -61,10 +61,10 @@ it("renders enabled Magic button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("royalblue");
-  expect(container.querySelector("button").textContent).toBe("Magic");
-  expect(container.querySelector("p").textContent).toBe("Deals one magic damage.");
-  expect(container.querySelector("button").disabled).toBe(false);
+  expect(container.querySelector("button")!.style.background).toBe("royalblue");
+  expect(container.querySelector("button")!.textContent).toBe("Magic");
+  expect(container.querySelector("p")!.textContent).toBe("Deals one magic damage.");
+  expect(container.querySelector("button")!.disabled).toBe(false);
 
 });
 
@@ -79,10 +79,10 @@ it("renders disabled Magic button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("royalblue");
-  expect(container.querySelector("button").textContent).toBe("Magic");
-  expect(container.querySelector("p").textContent).toBe("Deals one magic damage.");
-  expect(container.querySelector("button").disabled).toBe(true);
+  expect(container.querySelector("button")!.style.background).toBe("royalblue");
+  expect(container.querySelector("button")!.textContent).toBe("Magic");
+  expect(container.querySelector("p")!.textContent).toBe("Deals one magic damage.");
+  expect(container.querySelector("button")!.disabled).toBe(true);
 
 });
 
@@ -97,10 +97,10 @@ it("renders enabled Sword button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("firebrick");
-  expect(container.querySelector("button").textContent).toBe("Sword");
-  expect(container.querySelector("p").textContent).toBe("Deals two physical damage.");
-  expect(container.querySelector("button").disabled).toBe(false);
+  expect(container.querySelector("button")!.style.background).toBe("firebrick");
+  expect(container.querySelector("button")!.textContent).toBe("Sword");
+  expect(container.querySelector("p")!.textContent).toBe("Deals two physical damage.");
+  expect(container.querySelector("button")!.disabled).toBe(false);
 
 });
 
@@ -115,9 +115,9 @@ it("renders disabled Sword button + explanation", () => {
     />, container);
   });
 
-  expect(container.querySelector("button").style.background).toBe("firebrick");
-  expect(container.querySelector("button").textContent).toBe("Sword");
-  expect(container.querySelector("p").textContent).toBe("Deals two physical damage.");
-  expect(container.querySelector("button").disabled).toBe(true);
+  expect(container.querySelector("button")!.style.background).toBe("firebrick");
+  expect(container.querySelector("button")!.textContent).toBe("Sword");
+  expect(container.querySelector("p")!.textContent).toBe("Deals two physical damage.");
+  expect(container.querySelector("button")!.disabled).toBe(true);
 
 });

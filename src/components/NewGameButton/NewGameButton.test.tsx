@@ -20,7 +20,7 @@ it("renders visible NewGameButton", () => {
     render(<NewGameButton newGameButtonDisplay="block" />, container);
   });
   
-  expect(container.querySelector("div").style.display).toBe("block");
+  expect(container.querySelector("div")!.style.display).toBe("block");
 
 });
 
@@ -30,6 +30,6 @@ it("renders invisible NewGameButton", () => {
       render(<NewGameButton newGameButtonDisplay="none" />, container);
     });
     
-    expect(container.querySelector("div").style.display).toBe("none");
+    expect(container.querySelector("div")!.style.display).toBe("none");
   
   });

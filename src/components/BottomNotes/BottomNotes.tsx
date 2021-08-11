@@ -28,6 +28,6 @@ function BottomNotes()
             <footer>This is a React JS Progressive Web App. Updated 08/10/21</footer>
         </>
     );
-}
+};
 
 export default BottomNotes;

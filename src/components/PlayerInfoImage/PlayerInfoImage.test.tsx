@@ -24,7 +24,7 @@ it("renders left-facing Fire Magic", () => {
   });
   
   //    toBe checks for exact equality, toContain more like RegEx.
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulFire.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulFire.png');
 
 });
 
@@ -35,7 +35,7 @@ it("renders right-facing Fire Magic", () => {
         floatDirection="right" element="Fire" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulFire.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulFire.png');
 
 });
 
@@ -46,7 +46,7 @@ it("renders left-facing Earth Magic", () => {
         floatDirection="left" element="Earth" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulEarth.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulEarth.png');
 
 });
 
@@ -57,7 +57,7 @@ it("renders right-facing Earth Magic", () => {
         floatDirection="right" element="Earth" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulEarth.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulEarth.png');
 
 });
 
@@ -68,7 +68,7 @@ it("renders left-facing Air Magic", () => {
         floatDirection="left" element="Air" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulAir.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulAir.png');
 
 });
 
@@ -79,7 +79,7 @@ it("renders right-facing Air Magic", () => {
         floatDirection="right" element="Air" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulAir.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulAir.png');
 
 });
 
@@ -90,7 +90,7 @@ it("renders left-facing Water Magic", () => {
         floatDirection="left" element="Water" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulWater.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulWater.png');
 
 });
 
@@ -101,7 +101,7 @@ it("renders right-facing Water Magic", () => {
         floatDirection="right" element="Water" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulWater.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulWater.png');
 
 });
 
@@ -112,7 +112,7 @@ it("renders left-facing Light Magic", () => {
         floatDirection="left" element="Light" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulLight.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulLight.png');
 
 });
 
@@ -123,7 +123,7 @@ it("renders right-facing Light Magic", () => {
         floatDirection="right" element="Light" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulLight.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulLight.png');
 
 });
 
@@ -134,7 +134,7 @@ it("renders left-facing Dark Magic", () => {
         floatDirection="left" element="Dark" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftMagicColorfulDark.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftMagicColorfulDark.png');
 
 });
 
@@ -145,7 +145,7 @@ it("renders right-facing Dark Magic", () => {
         floatDirection="right" element="Dark" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightMagicColorfulDark.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightMagicColorfulDark.png');
 
 });
 
@@ -157,7 +157,7 @@ it("renders left-facing Sword", () => {
         floatDirection="left" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolLeftSword.png');
+  expect(container.querySelector("img")!.src).toContain('SmolLeftSword.png');
 
 });
 
@@ -168,7 +168,7 @@ it("renders right-facing Sword", () => {
         floatDirection="right" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolRightSword.png');
+  expect(container.querySelector("img")!.src).toContain('SmolRightSword.png');
 
 });
 
@@ -179,6 +179,6 @@ it("renders Shield", () => {
     render(<PlayerInfoImage choice="Shield" />, container);
   });
   
-  expect(container.querySelector("img").src).toContain('SmolShield.png');
+  expect(container.querySelector("img")!.src).toContain('SmolShield.png');
 
 });

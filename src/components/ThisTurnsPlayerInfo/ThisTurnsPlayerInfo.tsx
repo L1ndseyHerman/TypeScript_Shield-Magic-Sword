@@ -18,6 +18,6 @@ const ThisTurnsPlayerInfo: React.FC<Props> = (props: Props) => {
                 element={props.element} />
         </div>
     );
-}
+};
     
 export default ThisTurnsPlayerInfo;
