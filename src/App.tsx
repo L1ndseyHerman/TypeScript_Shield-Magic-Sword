@@ -15,8 +15,8 @@ import NewGameButton from './components/NewGameButton/NewGameButton';
  
 function makeComputerChoice() 
 {
-  var computerNumber = Math.floor(Math.random() * 2); 
-  var lastComputerChoice = String(sessionStorage.getItem("lastComputerChoice") || "An Error");
+  let computerNumber = Math.floor(Math.random() * 2); 
+  const lastComputerChoice = String(sessionStorage.getItem("lastComputerChoice") || "An Error");
 
   if ((lastComputerChoice === "Shield") && (computerNumber === 0))
   {
@@ -177,25 +177,19 @@ const App: React.FC = () => {
   const [computerElementColor, setComputerElementColor] = useState("wheat");
 
   const [playerOneChoice, setPlayerOneChoice] = useState("First Turn");
-  //const [computerChoice, setComputerChoice] = useState("First Turn");
-  var computerChoice = "First Turn";
+  let computerChoice = "First Turn";
   const [disabledButtons, setDisabledButtons] = useState([false, false, false]);
-  var playerOneHealth = 20;
-  var computerHealth = 20;
-  //const[playerOneCharacterTypeText, setPlayerOneCharacterTypeText] = useState("");
-  //const[playerOneElementalBonusText, setPlayerOneElementalBonusText] = useState("");
-  //const[computerCharacterTypeText, setComputerCharacterTypeText] = useState("");
-  //const[computerElementalBonusText, setComputerElementalBonusText] = useState("");
-  //const[winLooseTieText, setWinLooseTieText] = useState("");
-  var playerOneCharacterTypeText = "";
-  var playerOneElementalBonusText = "";
-  var computerCharacterTypeText = "";
-  var computerElementalBonusText = "";
-  var winLooseTieText = "";
+  let playerOneHealth = 20;
+  let computerHealth = 20;
+  let playerOneCharacterTypeText = "";
+  let playerOneElementalBonusText = "";
+  let computerCharacterTypeText = "";
+  let computerElementalBonusText = "";
+  let winLooseTieText = "";
 
   const [isNotNewGame, setIsNotNewGame] = useState(true);
-  var buttonsAndExplanationsDivDisplay = "block";
-  var newGameButtonDisplay = "none";
+  let buttonsAndExplanationsDivDisplay = "block";
+  let newGameButtonDisplay = "none";
 
   //  Already reset to 20 if it is :)
   if (isNotNewGame)
@@ -209,9 +203,9 @@ const App: React.FC = () => {
     //setComputerChoice(makeComputerChoice());
     computerChoice = makeComputerChoice();
 
-    var playerOneHealthLost = checkThisPlayersHealthLost(playerOneChoice, computerChoice);
+    const playerOneHealthLost = checkThisPlayersHealthLost(playerOneChoice, computerChoice);
   
-    var playerOneLoosesThisMuchHealthDueToComputerCharacterType = 0;
+    let playerOneLoosesThisMuchHealthDueToComputerCharacterType = 0;
     //var computerCharacterTypeText = "";
 
     if (playerOneChoice === "Shield" && playerOneCharacterType === "Bodyguard"
@@ -237,7 +231,7 @@ const App: React.FC = () => {
         "(+1 Physical Damage because Computer is an Assassin.) ";
     }
 
-    var computerElementalBonusDamage = 0;
+    let computerElementalBonusDamage = 0;
     if (computerChoice === "Magic")
     {
       computerElementalBonusDamage = checkBonusElementDamage(computerElement, playerOneElement);
@@ -252,9 +246,9 @@ const App: React.FC = () => {
       computerElementalBonusText = "(+1 bonus elemental damage)";
     }
 
-    var computerHealthLost = checkThisPlayersHealthLost(computerChoice, playerOneChoice);
+    const computerHealthLost = checkThisPlayersHealthLost(computerChoice, playerOneChoice);
 
-    var computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 0;
+    let computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 0;
     //var playerOneCharacterTypeText = "";
 
     if (computerChoice === "Shield" && computerCharacterType === "Bodyguard"
@@ -280,7 +274,7 @@ const App: React.FC = () => {
         "(+1 Physical Damage because Player1 is an Assassin.) ";
     }
 
-    var playerOneElementalBonusDamage = 0;
+    let playerOneElementalBonusDamage = 0;
     if (playerOneChoice === "Magic")
     {
       playerOneElementalBonusDamage = checkBonusElementDamage(playerOneElement, computerElement);
@@ -465,7 +459,7 @@ const App: React.FC = () => {
         <div id="outermostDiv">
           <h1>{screenName}</h1>
           <p>
-            The rules of this game are that you can't make the same choice twice in a row,
+            The rules of this game are that you can&apos;t make the same choice twice in a row,
             and neither can the computer. Use that to your advantage....
           </p>
           <div id="playerInfoDivs">

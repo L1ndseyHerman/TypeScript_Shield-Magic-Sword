@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './ChooseElementButtonWithExplanation.module.css';
 
 interface Props {
@@ -12,7 +13,7 @@ interface Props {
 
 const ChooseElementButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
-    var playerOneElementColor = "wheat";
+    let playerOneElementColor = "wheat";
 
     if (props.buttonText === "Fire")
     {
@@ -41,8 +42,8 @@ const ChooseElementButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
   const computerElementNumber = Math.floor(Math.random() * 6);
 
-  var computerElement = "None Yet";
-  var computerElementColor = "wheat";
+  let computerElement = "None Yet";
+  let computerElementColor = "wheat";
 
   if (computerElementNumber === 0)
   {

@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './ChooseCharacterTypeButtonWithExplanation.module.css';
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 const ChooseCharacterTypeButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
     const computerCharacterTypeNumber = Math.floor(Math.random() * 3);
-    var computerCharacterType = "None Yet";
+    let computerCharacterType = "None Yet";
 
     if (computerCharacterTypeNumber === 0)
     {

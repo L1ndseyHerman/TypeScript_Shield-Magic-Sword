@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface Props {
         callback: (arg0: { screenName: string; }) => void;
 }

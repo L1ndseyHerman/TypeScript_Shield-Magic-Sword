@@ -1,3 +1,5 @@
+import React from 'react';
+
 import PlayerInfoImage from "../PlayerInfoImage/PlayerInfoImage";
 
 interface Props {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './PlayerInfoImage.module.css';
 
 import shieldImage from '../../images/SmolShield.png';

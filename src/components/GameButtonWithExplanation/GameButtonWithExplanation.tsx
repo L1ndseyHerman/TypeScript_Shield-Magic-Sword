@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './GameButtonWithExplanation.module.css';
 
 interface Props {
@@ -12,9 +13,8 @@ interface Props {
 }
   
 const GameButtonWithExplanation: React.FC<Props> = (props: Props) => {
-    var theDisabledButtons = [false, false, false];
-    var index;
-    for (index = 0; index < theDisabledButtons.length; index++) {
+    const theDisabledButtons = [false, false, false];
+    for (let index = 0; index < theDisabledButtons.length; index++) {
         
         if (index.toString() === props.buttonNumber)
         {

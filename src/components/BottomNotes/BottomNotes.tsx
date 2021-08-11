@@ -1,5 +1,6 @@
-function BottomNotes()
-{
+import React from 'react';
+
+const BottomNotes: React.FC = () => {
     return(
         //  This is a "fragment", for if you don't want yet another div around a component.
         <>
@@ -14,7 +15,7 @@ function BottomNotes()
                 you are looking for, then pull the code and run it in VS Code.
             </p>
             <p>    
-                I'd like to shout out Tech With Tim's series of twelve
+                I&apos;d like to shout out Tech With Tim&apos;s series of twelve
                 React For Beginners videos on YouTube, the first of which
                 is <a href="https://www.youtube.com/watch?v=Ma6DRDIedVE&t=1s">Here</a>,  
                 for being a great ReactJS learning resource.
