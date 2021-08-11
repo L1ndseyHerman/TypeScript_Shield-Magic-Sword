@@ -1,7 +1,17 @@
 import PlayerInfoImage from "../PlayerInfoImage/PlayerInfoImage";
 
-function ThisTurnsPlayerInfo(props) 
-{
+interface Props {
+    /*choice: string; 
+    floatDirection: any;
+    element: string;*/
+    floatDirection: any;
+    constantHealthText: string; 
+    changingNumber: number; 
+    element: string;
+    choice: string;
+}
+  
+const ThisTurnsPlayerInfo: React.FC<Props> = (props: Props) => {
     return(
         <div style={{width: "150px", float: props.floatDirection}}>
             <p >
