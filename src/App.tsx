@@ -161,7 +161,6 @@ function checkWinLooseTie(playerOneHealth: number, computerHealth: number)
 }
 
 const App: React.FC = () => {
-//{
   //  Reordered these const/variables a little to be kind of in order of the screens they happen on? 
   const [screenName, setScreenName] = useState("Shield-Magic-Sword");
 
@@ -200,13 +199,11 @@ const App: React.FC = () => {
 
   if (playerOneChoice !== "First Turn") 
   {
-    //setComputerChoice(makeComputerChoice());
     computerChoice = makeComputerChoice();
 
     const playerOneHealthLost = checkThisPlayersHealthLost(playerOneChoice, computerChoice);
   
     let playerOneLoosesThisMuchHealthDueToComputerCharacterType = 0;
-    //var computerCharacterTypeText = "";
 
     if (playerOneChoice === "Shield" && playerOneCharacterType === "Bodyguard"
       && computerChoice === "Magic")
@@ -240,7 +237,6 @@ const App: React.FC = () => {
     playerOneHealth = playerOneHealth - playerOneHealthLost - computerElementalBonusDamage
       - playerOneLoosesThisMuchHealthDueToComputerCharacterType;
 
-    //var computerElementalBonusText = "";
     if (computerElementalBonusDamage > 0)
     {
       computerElementalBonusText = "(+1 bonus elemental damage)";
@@ -249,7 +245,6 @@ const App: React.FC = () => {
     const computerHealthLost = checkThisPlayersHealthLost(computerChoice, playerOneChoice);
 
     let computerLoosesThisMuchHealthDueToPlayerOneCharacterType = 0;
-    //var playerOneCharacterTypeText = "";
 
     if (computerChoice === "Shield" && computerCharacterType === "Bodyguard"
       && playerOneChoice === "Magic")
@@ -282,13 +277,11 @@ const App: React.FC = () => {
     computerHealth = computerHealth - computerHealthLost - playerOneElementalBonusDamage -
     computerLoosesThisMuchHealthDueToPlayerOneCharacterType;
 
-    //var playerOneElementalBonusText = "";
     if (playerOneElementalBonusDamage > 0)
     {
       playerOneElementalBonusText = "(+1 bonus elemental damage)";
     }
 
-    //var winLooseTieText = checkWinLooseTie(playerOneHealth, computerHealth);
     winLooseTieText = checkWinLooseTie(playerOneHealth, computerHealth);
   }
 
@@ -301,8 +294,6 @@ const App: React.FC = () => {
   //  This is so you can't refresh the page in the middle of a game to get a more favorable element.
   //  No cheating, lol. If you go back to the elementSelectScreen, the score resets.
   useEffect(() => {
-    //sessionStorage.setItem("playerOneHealth", 20);
-    //sessionStorage.setItem("computerHealth", 20);
     sessionStorage.setItem("playerOneHealth", "20");
     sessionStorage.setItem("computerHealth", "20");
     sessionStorage.setItem("lastComputerChoice", "First Turn");
@@ -315,8 +306,6 @@ const App: React.FC = () => {
       localStorage.removeItem("computerHealth");
       localStorage.removeItem("lastComputerChoice");
 
-      //sessionStorage.setItem("playerOneHealth", playerOneHealth);
-      //sessionStorage.setItem("computerHealth", computerHealth);
       sessionStorage.setItem("playerOneHealth", String(playerOneHealth));
       sessionStorage.setItem("computerHealth", String(computerHealth));
       sessionStorage.setItem("lastComputerChoice", computerChoice);
@@ -325,17 +314,25 @@ const App: React.FC = () => {
       //  you put in this array change, instead of all the variables.
 }, [computerChoice, computerHealth, playerOneHealth])
 
-  const beginGameButtonPressed = (beginGameButtonSettings: any) => {
+  const beginGameButtonPressed = (beginGameButtonSettings: {screenName: string}) => {
     setScreenName(beginGameButtonSettings.screenName);
   }
 
-  const chooseCharacterTypeButtonPressed = (characterTypeButtonSettings: any) => {
+  const chooseCharacterTypeButtonPressed = (characterTypeButtonSettings: 
+    {screenName: string, 
+    playerOneCharacterType: string,
+    computerCharacterType: string}) => {
     setScreenName(characterTypeButtonSettings.screenName);
     setPlayerOneCharacterType(characterTypeButtonSettings.playerOneCharacterType);
     setComputerCharacterType(characterTypeButtonSettings.computerCharacterType);
   }
 
-  const chooseElementButtonPressed = (chooseElementButtonSettings: any) => {
+  const chooseElementButtonPressed = (chooseElementButtonSettings: 
+    {screenName: string, 
+    playerOneElement: string, 
+    playerOneElementColor: string, 
+    computerElement: string,
+    computerElementColor: string}) => {
     setScreenName(chooseElementButtonSettings.screenName);
     setPlayerOneElement(chooseElementButtonSettings.playerOneElement);
     setPlayerOneElementColor(chooseElementButtonSettings.playerOneElementColor);
@@ -344,7 +341,11 @@ const App: React.FC = () => {
   }
 
   //  This could come from a GameButtonWithExplanation or a NewGameButton.
-  const gameButtonOrNewGameButtonPressed = (currentGameOrNewGameSettings: any) => {
+  const gameButtonOrNewGameButtonPressed = (currentGameOrNewGameSettings: 
+    {isNotNewGame: boolean, 
+    playerOneChoice: string, 
+    disabledButtons: boolean[],
+    screenName: string}) => {
     setIsNotNewGame(currentGameOrNewGameSettings.isNotNewGame);
     setPlayerOneChoice(currentGameOrNewGameSettings.playerOneChoice);
     setDisabledButtons(currentGameOrNewGameSettings.disabledButtons); 

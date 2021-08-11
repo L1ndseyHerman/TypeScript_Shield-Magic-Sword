@@ -1,13 +1,7 @@
 import React from 'react';
-//import Float from '*.module.css';
-//import {Float} from '*.module.css';
 
 interface Props {
-    //floatDirection: typeof Float | undefined;
-    //floatDirection: HTMLElement["style"] | undefined;
-    //floatDirection: string | undefined;
-    //floatDirection: StandardLonghandProperties<string | number, string & {}>.float?: Property.Float | undefined;
-    floatDirection: any;
+    floatDirection: import("csstype").Property.Float | undefined;
     constantElementText: string;
     element: string; 
     elementColor: string;

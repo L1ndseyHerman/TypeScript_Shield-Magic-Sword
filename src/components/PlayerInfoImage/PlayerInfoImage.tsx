@@ -20,7 +20,7 @@ import rightSwordImage from '../../images/SmolRightSword.png';
 
 interface Props {
     choice: string; 
-    floatDirection: any;
+    floatDirection: import("csstype").Property.Float | undefined;
     element: string;
 }
   

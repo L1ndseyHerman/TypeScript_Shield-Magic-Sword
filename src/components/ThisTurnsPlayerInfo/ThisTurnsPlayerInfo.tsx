@@ -3,7 +3,7 @@ import React from 'react';
 import PlayerInfoImage from "../PlayerInfoImage/PlayerInfoImage";
 
 interface Props {
-    floatDirection: any;
+    floatDirection: import("csstype").Property.Float | undefined;
     constantHealthText: string; 
     changingNumber: number; 
     element: string;
