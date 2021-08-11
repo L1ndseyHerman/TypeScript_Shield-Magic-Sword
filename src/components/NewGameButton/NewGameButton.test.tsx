@@ -4,18 +4,14 @@ import { act } from "react-dom/test-utils";
 
 import NewGameButton from "./NewGameButton";
 
-let container = null;
+let container: HTMLElement = document.createElement("div");
 beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
-  container = null;
 });
 
 it("renders visible NewGameButton", () => {
