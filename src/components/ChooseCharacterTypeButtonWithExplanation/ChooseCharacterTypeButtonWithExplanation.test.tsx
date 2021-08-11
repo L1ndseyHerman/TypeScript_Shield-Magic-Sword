@@ -22,6 +22,13 @@ it("renders Bodyguard button + explanation", () => {
         buttonText="Bodyguard" 
         explanation="Block +1 Magic Damage when using Shield."
         //callback={"Element Selection Screen", buttonText, computerCharacterType}
+        //callback={"Number":1}
+        //callback={"String", "String", "String"}
+        /*callback={
+          "screenName": string;
+          playerOneCharacterType: string;
+          computerCharacterType: string;
+      },*/
         />, container);
   });
   
