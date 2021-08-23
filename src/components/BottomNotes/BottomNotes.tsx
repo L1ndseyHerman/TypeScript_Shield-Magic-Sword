@@ -5,7 +5,12 @@ const BottomNotes: React.FC = () => {
         //  This is a "fragment", for if you don't want yet another div around a component.
         <>
             <p>
-                Done with Version 4.2, which is adding TypeScript.
+                Done with Version 4.2, which is adding TypeScript. I&apos;m going to take a break from this 
+                for awhile to watch the longest React JS course yet
+                on <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">Udemy.com</a>.
+                The course appears to walk the veiwer through the creation of a
+                food ordering app, similar to GrubHub&apos;s. I will probobly push the food app to 
+                GitHub when I&apos;m done with it.
             </p>
             <p>
                 If you are a software developer who wants to look at 
@@ -26,7 +31,7 @@ const BottomNotes: React.FC = () => {
                 freeCodeCamp.org was helpful as well. 
             </p>
             <p>And check out <a href="https://l1ndseyherman.github.io/">My Other Website</a>.</p>
-            <footer>This is a React JS Progressive Web App. Updated 08/10/21</footer>
+            <footer>This is a React JS Progressive Web App. Updated 08/23/21</footer>
         </>
     );
 };
