@@ -13,8 +13,7 @@ import ThisTurnsPlayerInfo from './components/ThisTurnsPlayerInfo/ThisTurnsPlaye
 import TurnResultsText from './components/TurnResultsText/TurnResultsText';
 import NewGameButton from './components/NewGameButton/NewGameButton';
  
-function makeComputerChoice() 
-{
+const makeComputerChoice = () => {
   let computerNumber = Math.floor(Math.random() * 2); 
   const lastComputerChoice = String(sessionStorage.getItem("lastComputerChoice") || "An Error");
 
@@ -62,8 +61,7 @@ function makeComputerChoice()
   }
 }
 
-function checkThisPlayersHealthLost(thisPlayersChoice: string, theOtherPlayersChoice: string)
-{
+const checkThisPlayersHealthLost = (thisPlayersChoice: string, theOtherPlayersChoice: string) => {
   if (thisPlayersChoice === "Shield" && theOtherPlayersChoice === "Shield")
   {
     return 0;
@@ -106,9 +104,7 @@ function checkThisPlayersHealthLost(thisPlayersChoice: string, theOtherPlayersCh
   return 0;
 }
 
-function checkBonusElementDamage(thisPlayersElement: string, theOtherPlayersElement: string)
-{
-
+const checkBonusElementDamage = (thisPlayersElement: string, theOtherPlayersElement: string) => {
   if ((thisPlayersElement === "Fire") && (theOtherPlayersElement === "Earth"))
   {
     return 1;
@@ -139,8 +135,7 @@ function checkBonusElementDamage(thisPlayersElement: string, theOtherPlayersElem
   }
 }
 
-function checkWinLooseTie(playerOneHealth: number, computerHealth: number)
-{
+const checkWinLooseTie = (playerOneHealth: number, computerHealth: number) => {
   if ((playerOneHealth <= 0) && (computerHealth <= 0))
   {
     return "Tie.";
