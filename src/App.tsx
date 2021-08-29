@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import HomeScreen from './components/HomeScreen/HomeScreen';
 
-import ChooseCharacterTypeButtonWithExplanation from './components/ChooseCharacterTypeButtonWithExplanation/ChooseCharacterTypeButtonWithExplanation';
+import CharacterTypeSelectionScreen from './components/CharacterTypeSelectionScreen/CharacterTypeSelectionScreen';
 
 import ChooseElementButtonWithExplanation from './components/ChooseElementButtonWithExplanation/ChooseElementButtonWithExplanation';
 
@@ -170,7 +170,6 @@ const App: React.FC = () => {
 
   const [playerOneElement, setPlayerOneElement] = useState("None Yet");
   const [computerElement, setComputerElement] = useState("None Yet");
-
 
   //  Wheat is the default button color in index.css, so I'm using it as the default color here too.
   const [playerOneElementColor, setPlayerOneElementColor] = useState("wheat");
@@ -366,32 +365,7 @@ const App: React.FC = () => {
   else if (screenName === "Character Type Selection Screen")
   {
     return (
-      <main>   
-      <div id="outermostDiv">
-        <h1>{screenName}</h1>
-        <p>
-          Choose a character type. The computer will randomly choose one.
-        </p>
-        <br/>
-        <div id="buttonsAndExplanationsDiv">
-          <ChooseCharacterTypeButtonWithExplanation 
-            buttonColor="darkolivegreen"
-            buttonText="Bodyguard" 
-            explanation="Block +1 Magic Damage when using Shield." 
-            callback={chooseCharacterTypeButtonPressed} />
-          <ChooseCharacterTypeButtonWithExplanation 
-            buttonColor="royalblue"
-            buttonText="Mage" 
-            explanation="Deal +1 Magic Damage when using Magic." 
-            callback={chooseCharacterTypeButtonPressed} />
-          <ChooseCharacterTypeButtonWithExplanation 
-            buttonColor="firebrick"
-            buttonText="Assassin" 
-            explanation="Deal +1 Physical Damage when using Sword."
-            callback={chooseCharacterTypeButtonPressed} />
-        </div>
-      </div>
-    </main>
+      <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
     );
   }
 
