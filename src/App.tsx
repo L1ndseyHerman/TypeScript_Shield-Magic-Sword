@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 import HomeScreen from './components/HomeScreen/HomeScreen';
-
 import CharacterTypeSelectionScreen from './components/CharacterTypeSelectionScreen/CharacterTypeSelectionScreen';
-
 import ElementSelectionScreen from './components/ElementSelectionScreen/ElementSelectionScreen';
-
-import ConstantPlayerInfo from './components/ConstantPlayerInfo/ConstantPlayerInfo';
-import GameButtonWithExplanation from './components/GameButtonWithExplanation/GameButtonWithExplanation';
-import ThisTurnsPlayerInfo from './components/ThisTurnsPlayerInfo/ThisTurnsPlayerInfo';
-import TurnResultsText from './components/TurnResultsText/TurnResultsText';
-import NewGameButton from './components/NewGameButton/NewGameButton';
+import GameScreen from './components/GameScreen/GameScreen';
  
 const makeComputerChoice = () => {
   let computerNumber = Math.floor(Math.random() * 2); 
@@ -379,86 +372,31 @@ const App: React.FC = () => {
   else if (screenName === "Game Screen")
   {
     return (
-      <main>   
-        <div id="outermostDiv">
-          <h1>{screenName}</h1>
-          <p>
-            The rules of this game are that you can&apos;t make the same choice twice in a row,
-            and neither can the computer. Use that to your advantage....
-          </p>
-          <div id="playerInfoDivs">
-            <ConstantPlayerInfo 
-              floatDirection="left"
-              constantElementText="Player1 element: "
-              element={playerOneElement} 
-              elementColor={playerOneElementColor}
-              characterType={playerOneCharacterType} />
-            <ConstantPlayerInfo 
-              floatDirection="right"
-              constantElementText="Computer element: "
-              element={computerElement} 
-              elementColor={computerElementColor}
-              characterType={computerCharacterType} />
-          </div>
-          <div id="buttonsAndExplanationsDiv" style={{display: buttonsAndExplanationsDivDisplay}}>
-            <GameButtonWithExplanation 
-              buttonColor="darkolivegreen"
-              buttonText="Shield" 
-              explanation="Blocks two physical damage."
-              buttonNumber="0" 
-              isDisabled={disabledButtons[0]} 
-              disabledButtonArray={disabledButtons} 
-              callback={gameButtonOrNewGameButtonPressed} />
-            <GameButtonWithExplanation 
-              buttonColor="royalblue"
-              buttonText="Magic" 
-              explanation="Deals one magic damage."
-              buttonNumber="1" 
-              isDisabled={disabledButtons[1]} 
-              disabledButtonArray={disabledButtons} 
-              callback={gameButtonOrNewGameButtonPressed} />
-            <GameButtonWithExplanation 
-              buttonColor="firebrick"
-              buttonText="Sword" 
-              explanation="Deals two physical damage."
-              buttonNumber="2" 
-              isDisabled={disabledButtons[2]} 
-              disabledButtonArray={disabledButtons}  
-              callback={gameButtonOrNewGameButtonPressed} />
-          </div>
-          <div id="playerInfoDivs">
-            <ThisTurnsPlayerInfo 
-              floatDirection="left"
-              constantHealthText="Player1 health: " 
-              changingNumber={playerOneHealth} 
-              element={playerOneElement} 
-              choice={playerOneChoice} />
-            <ThisTurnsPlayerInfo
-              floatDirection="right"
-              constantHealthText="Computer health: " 
-              changingNumber={computerHealth}  
-              element={computerElement} 
-              choice={computerChoice} />
-          </div>
-          <TurnResultsText 
-            playerOneElementColor={playerOneElementColor}
-            playerOneChoice={playerOneChoice} 
-            playerOneCharacterTypeText={playerOneCharacterTypeText}
-            playerOneElementalBonusText={playerOneElementalBonusText}
-            computerElementColor={computerElementColor}
-            computerChoice={computerChoice}
-            computerCharacterTypeText={computerCharacterTypeText}
-            computerElementalBonusText={computerElementalBonusText}
-            winLooseTieText={winLooseTieText} />
-          <NewGameButton 
-            newGameButtonDisplay={newGameButtonDisplay}
-            callback={gameButtonOrNewGameButtonPressed} />
-        </div>
-      </main>
+      <GameScreen 
+        playerOneElementColor={playerOneElementColor}
+        computerElementColor={computerElementColor}
+        disabledButtons={disabledButtons}
+        computerCharacterTypeText={computerCharacterTypeText}
+        computerElementalBonusText={computerElementalBonusText}
+        playerOneCharacterTypeText={playerOneCharacterTypeText}
+        playerOneElementalBonusText={playerOneElementalBonusText}
+        winLooseTieText={winLooseTieText}
+        buttonsAndExplanationsDivDisplay={buttonsAndExplanationsDivDisplay}
+        newGameButtonDisplay={newGameButtonDisplay}
+        playerOneHealth={playerOneHealth}
+        computerHealth={computerHealth}
+        playerOneElement={playerOneElement}
+        computerElement={computerElement}
+        playerOneChoice={playerOneChoice}
+        computerChoice={computerChoice}
+        playerOneCharacterType={playerOneCharacterType}
+        computerCharacterType={computerCharacterType}
+        callback={gameButtonOrNewGameButtonPressed} 
+      />
     );
   }
 
-  //  Whoops, I was missing this and TypeScript caught it. Good job TS!
+  //  This should never return, means there's an error.
   return (
     <main>   
       <div id="outermostDiv">
