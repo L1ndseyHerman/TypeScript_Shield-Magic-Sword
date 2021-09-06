@@ -5,14 +5,15 @@ const BottomNotes: React.FC = () => {
         //  This is a "fragment", for if you don't want yet another div around a component.
         <>
             <p>
-                Starting Version 4.3, which will be shortening App.tsx greatly by splitting off 
+                Finished Version 4.3, which was be shortening App.tsx greatly by splitting off 
                 the four &quot;screens&quot; into separate components.
             </p>
             <p>
                 Updates will be slow for awhile, as I&apos;m also watching a 
                 47-hour <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">Udemy.com</a> React JS
-                course. So far, I&apos;ve been coding along with their Expense Tracker App, current
-                progress <a href="https://github.com/L1ndseyHerman/Udemy-Expense-Tracker-App">Here</a>.
+                course. I&apos;ve coded along with a few of the instructor&apos;s apps so far, 
+                all of which are on my <a href="https://github.com/L1ndseyHerman">
+                GitHub</a>.
             </p>
             <p>
                 If you are a software developer who wants to look at 
@@ -33,7 +34,7 @@ const BottomNotes: React.FC = () => {
                 freeCodeCamp.org was helpful as well. 
             </p>
             <p>And check out <a href="https://l1ndseyherman.github.io/">My Other Website</a>.</p>
-            <footer>This is a React JS Progressive Web App. Updated 08/28/21</footer>
+            <footer>This is a React JS Progressive Web App. Updated 09/05/21</footer>
         </>
     );
 };

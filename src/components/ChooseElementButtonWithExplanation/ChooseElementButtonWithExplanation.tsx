@@ -13,76 +13,108 @@ interface Props {
 
 const ChooseElementButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
-    let playerOneElementColor = "wheat";
+    const choosePlayerOneElementColor = () => {
+      let playerOneElementColor = "wheat";
 
-    if (props.buttonText === "Fire")
-    {
-        playerOneElementColor = "firebrick";
-    }
-    else if (props.buttonText === "Earth")
-    {
-        playerOneElementColor = "darkolivegreen";
-    }
-    else if (props.buttonText === "Air")
-    {
-        playerOneElementColor = "darkorange";
-    }
-    else if (props.buttonText === "Water")
-    {
-        playerOneElementColor = "royalblue";
-    }
-    else if (props.buttonText === "Light")
-    {
-        playerOneElementColor = "gold";
-    }
-    else if (props.buttonText === "Dark")
-    {
-        playerOneElementColor = "rebeccapurple";
-    }
+      if (props.buttonText === "Fire")
+      {
+          playerOneElementColor = "firebrick";
+      }
+      else if (props.buttonText === "Earth")
+      {
+          playerOneElementColor = "darkolivegreen";
+      }
+      else if (props.buttonText === "Air")
+      {
+          playerOneElementColor = "darkorange";
+      }
+      else if (props.buttonText === "Water")
+      {
+          playerOneElementColor = "royalblue";
+      }
+      else if (props.buttonText === "Light")
+      {
+          playerOneElementColor = "gold";
+      }
+      else if (props.buttonText === "Dark")
+      {
+          playerOneElementColor = "rebeccapurple";
+      }
+      return playerOneElementColor;
+    };
 
-  const computerElementNumber = Math.floor(Math.random() * 6);
+    const chooseComputerElement = () => {
+      const computerElementNumber = Math.floor(Math.random() * 6);
 
-  let computerElement = "None Yet";
-  let computerElementColor = "wheat";
+      let computerElement = "None Yet";
 
-  if (computerElementNumber === 0)
-  {
-    computerElement = "Fire";
-    computerElementColor = "firebrick";
-  }
-  else if (computerElementNumber === 1)
-  {
-    computerElement = "Earth";
-    computerElementColor = "darkolivegreen";
-  }
-  else if (computerElementNumber === 2)
-  {
-    computerElement = "Air";
-    computerElementColor = "darkorange";
-  }
-  else if (computerElementNumber === 3)
-  {
-    computerElement = "Water";
-    computerElementColor = "royalblue";
-  }
-  else if (computerElementNumber === 4)
-  {
-    computerElement = "Light";
-    computerElementColor = "gold";
-  }
-  else if (computerElementNumber === 5)
-  {
-    computerElement = "Dark";
-    computerElementColor = "rebeccapurple";
-  }
+      if (computerElementNumber === 0)
+      {
+        computerElement = "Fire";
+      }
+      else if (computerElementNumber === 1)
+      {
+        computerElement = "Earth";
+      }
+      else if (computerElementNumber === 2)
+      {
+        computerElement = "Air";
+      }
+      else if (computerElementNumber === 3)
+      {
+        computerElement = "Water";
+      }
+      else if (computerElementNumber === 4)
+      {
+        computerElement = "Light";
+      }
+      else if (computerElementNumber === 5)
+      {
+        computerElement = "Dark";
+      }
+      return computerElement;
+    };
 
-    const buttonText = props.buttonText; 
+    const chooseComputerElementColor = (computerElement: string) => {
+      let computerElementColor = "wheat";
 
-    const chooseElementButtonPressed = () => {
-       props.callback({screenName: "Game Screen", playerOneElement: buttonText, 
-        playerOneElementColor: playerOneElementColor, computerElement: computerElement,
-        computerElementColor: computerElementColor}); 
-    }
+      if (computerElement === "Fire")
+      {
+        computerElementColor = "firebrick";
+      }
+      else if (computerElement === "Earth")
+      {
+        computerElementColor = "darkolivegreen";
+      }
+      else if (computerElement === "Air")
+      {
+        computerElementColor = "darkorange";
+      }
+      else if (computerElement === "Water")
+      {
+        computerElementColor = "royalblue";
+      }
+      else if (computerElement === "Light")
+      {
+        computerElementColor = "gold";
+      }
+      else if (computerElement === "Dark")
+      {
+        computerElementColor = "rebeccapurple";
+      }
+      return computerElementColor;
+    };
+
+  const playerOneElementColor = choosePlayerOneElementColor();
+  const computerElement = chooseComputerElement();
+  const computerElementColor = chooseComputerElementColor(computerElement);
+  const buttonText = props.buttonText; 
+
+  const chooseElementButtonPressed = () => {
+    props.callback({screenName: "Game Screen", playerOneElement: buttonText, 
+    playerOneElementColor: playerOneElementColor, computerElement: computerElement,
+    computerElementColor: computerElementColor}); 
+  }
 
     return(
         <div className={styles.elementButtonDiv}>

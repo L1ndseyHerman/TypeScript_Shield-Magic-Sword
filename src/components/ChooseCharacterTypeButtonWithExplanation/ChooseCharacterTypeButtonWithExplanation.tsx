@@ -11,22 +11,26 @@ interface Props {
 
 const ChooseCharacterTypeButtonWithExplanation: React.FC<Props> = (props: Props) => {
 
-    const computerCharacterTypeNumber = Math.floor(Math.random() * 3);
-    let computerCharacterType = "None Yet";
+    const chooseComputerCharacterType = () => {
+        const computerCharacterTypeNumber = Math.floor(Math.random() * 3);
+        let computerCharacterType = "None Yet";
+    
+        if (computerCharacterTypeNumber === 0)
+        {
+          computerCharacterType = "Bodyguard";
+        }
+        else if (computerCharacterTypeNumber === 1)
+        {
+          computerCharacterType = "Mage";
+        }
+        else if (computerCharacterTypeNumber === 2)
+        {
+          computerCharacterType = "Assassin";
+        }
+        return computerCharacterType;
+    };
 
-    if (computerCharacterTypeNumber === 0)
-    {
-      computerCharacterType = "Bodyguard";
-    }
-    else if (computerCharacterTypeNumber === 1)
-    {
-      computerCharacterType = "Mage";
-    }
-    else if (computerCharacterTypeNumber === 2)
-    {
-      computerCharacterType = "Assassin";
-    }
-
+    const computerCharacterType = chooseComputerCharacterType();
     const buttonText = props.buttonText;
 
     const characterTypeButtonPressed = () => {
