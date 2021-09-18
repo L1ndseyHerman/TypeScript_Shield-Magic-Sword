@@ -8,7 +8,7 @@ const BottomNotes: React.FC = () => {
                 Finished version 4.4, which invovled shortening the &quot;screen&quot; code 
                 that chooses whether &quot;Charater Type Selection Screen&quot; or 
                 &quot;Element Selection Screen&quot;, etc. displays, as well as 
-                no longer having some duplicate code for all four screens.
+                no longer having some duplicate code for all four screens. 
             </p>
             <p>
                 Updates will be slow for awhile, as I&apos;m also watching a 
