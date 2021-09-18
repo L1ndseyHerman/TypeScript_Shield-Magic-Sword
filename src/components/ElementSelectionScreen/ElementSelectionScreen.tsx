@@ -9,55 +9,52 @@ interface Props {
 }
 
 const ElementSelectionScreen: React.FC<Props> = (props: Props) => {
-    return(
-        <main>   
-        <div id="outermostDiv">
-          <h1>Element Selection Screen</h1>
-          <p>
-            Choose an element. The computer will randomly choose one.
-          </p>
-          <br/>
-          <div id="buttonsAndExplanationsDiv">
-            <ChooseElementButtonWithExplanation 
-              buttonText="Fire" 
-              explanation="Earth"
-              buttonColor="firebrick" 
-              explanationColor="darkolivegreen"
-              callback={props.callback} />
-            <ChooseElementButtonWithExplanation 
-              buttonText="Earth" 
-              explanation="Air"
-              buttonColor="darkolivegreen" 
-              explanationColor="darkorange"
-              callback={props.callback} />
-            <ChooseElementButtonWithExplanation 
-              buttonText="Air" 
-              explanation="Water"
-              buttonColor="darkorange" 
-              explanationColor="royalblue"
-              callback={props.callback} />
-            <ChooseElementButtonWithExplanation 
-              buttonText="Water" 
-              explanation="Fire"
-              buttonColor="royalblue" 
-              explanationColor="firebrick"
-              callback={props.callback} />
-            <ChooseElementButtonWithExplanation 
-              buttonText="Light" 
-              explanation="Dark"
-              buttonColor="gold" 
-              explanationColor="rebeccapurple"
-              callback={props.callback} />
-            <ChooseElementButtonWithExplanation 
-              buttonText="Dark" 
-              explanation="Light"
-              buttonColor="rebeccapurple" 
-              explanationColor="gold"
-              callback={props.callback} />
-          </div>
-        </div>
-      </main>
-    );
+  return(
+    <>
+      <p>
+        Choose an element. The computer will randomly choose one.
+      </p>
+      <br/>
+      <div id="buttonsAndExplanationsDiv">
+        <ChooseElementButtonWithExplanation 
+          buttonText="Fire" 
+          explanation="Earth"
+          buttonColor="firebrick" 
+          explanationColor="darkolivegreen"
+          callback={props.callback} />
+        <ChooseElementButtonWithExplanation 
+          buttonText="Earth" 
+          explanation="Air"
+          buttonColor="darkolivegreen" 
+          explanationColor="darkorange"
+          callback={props.callback} />
+        <ChooseElementButtonWithExplanation 
+          buttonText="Air" 
+          explanation="Water"
+          buttonColor="darkorange" 
+          explanationColor="royalblue"
+          callback={props.callback} />
+        <ChooseElementButtonWithExplanation 
+          buttonText="Water" 
+          explanation="Fire"
+          buttonColor="royalblue" 
+          explanationColor="firebrick"
+          callback={props.callback} />
+        <ChooseElementButtonWithExplanation 
+          buttonText="Light" 
+          explanation="Dark"
+          buttonColor="gold" 
+          explanationColor="rebeccapurple"
+          callback={props.callback} />
+        <ChooseElementButtonWithExplanation 
+          buttonText="Dark" 
+          explanation="Light"
+          buttonColor="rebeccapurple" 
+          explanationColor="gold"
+          callback={props.callback} />
+      </div>
+    </>
+  );
 };
     
 export default ElementSelectionScreen;

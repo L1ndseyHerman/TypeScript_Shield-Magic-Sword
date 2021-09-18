@@ -350,93 +350,41 @@ const App: React.FC = () => {
   //  next "else if" is the next one, etc. 
 
   return (
-    <>
-      {screenName === 'Shield-Magic-Sword' && 
-        <HomeScreen callback={beginGameButtonPressed} />
-      }
-      {screenName === 'Character Type Selection Screen' &&
-       <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
-      }
-      {screenName === 'Element Selection Screen' &&
-        <ElementSelectionScreen callback={chooseElementButtonPressed} />
-      } 
-      {screenName === 'Game Screen' &&
-        <GameScreen 
-          playerOneElementColor={playerOneElementColor}
-          computerElementColor={computerElementColor}
-          disabledButtons={disabledButtons}
-          computerCharacterTypeText={computerCharacterTypeText}
-          computerElementalBonusText={computerElementalBonusText}
-          playerOneCharacterTypeText={playerOneCharacterTypeText}
-          playerOneElementalBonusText={playerOneElementalBonusText}
-          winLooseTieText={winLooseTieText}
-          buttonsAndExplanationsDivDisplay={buttonsAndExplanationsDivDisplay}
-          newGameButtonDisplay={newGameButtonDisplay}
-          playerOneHealth={playerOneHealth}
-          computerHealth={computerHealth}
-          playerOneElement={playerOneElement}
-          computerElement={computerElement}
-          playerOneChoice={playerOneChoice}
-          computerChoice={computerChoice}
-          playerOneCharacterType={playerOneCharacterType}
-          computerCharacterType={computerCharacterType}
-          callback={gameButtonOrNewGameButtonPressed} 
-        />
-      }
-    </>
-  );
-  /*if (screenName === "Shield-Magic-Sword")
-  {
-    return (
-      <HomeScreen callback={beginGameButtonPressed} />
-    );
-  }*/
-
-  /*else if (screenName === "Character Type Selection Screen")
-  {
-    return (
-      <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
-    );
-  }*/
-
-  /*else if (screenName === "Element Selection Screen")
-  {
-    return (
-      <ElementSelectionScreen callback={chooseElementButtonPressed} />
-    );
-  }*/
-
-  /*else if (screenName === "Game Screen")
-  {
-    return (
-      <GameScreen 
-        playerOneElementColor={playerOneElementColor}
-        computerElementColor={computerElementColor}
-        disabledButtons={disabledButtons}
-        computerCharacterTypeText={computerCharacterTypeText}
-        computerElementalBonusText={computerElementalBonusText}
-        playerOneCharacterTypeText={playerOneCharacterTypeText}
-        playerOneElementalBonusText={playerOneElementalBonusText}
-        winLooseTieText={winLooseTieText}
-        buttonsAndExplanationsDivDisplay={buttonsAndExplanationsDivDisplay}
-        newGameButtonDisplay={newGameButtonDisplay}
-        playerOneHealth={playerOneHealth}
-        computerHealth={computerHealth}
-        playerOneElement={playerOneElement}
-        computerElement={computerElement}
-        playerOneChoice={playerOneChoice}
-        computerChoice={computerChoice}
-        playerOneCharacterType={playerOneCharacterType}
-        computerCharacterType={computerCharacterType}
-        callback={gameButtonOrNewGameButtonPressed} 
-      />
-    );
-  }*/
-
-  //  This should never return, means there's an error.
-  return (
     <main>   
       <div id="outermostDiv">
+        <h1>{screenName}</h1>
+        {screenName === 'Shield-Magic-Sword' && 
+          <HomeScreen callback={beginGameButtonPressed} />
+        }
+        {screenName === 'Character Type Selection Screen' &&
+          <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
+        }
+        {screenName === 'Element Selection Screen' &&
+          <ElementSelectionScreen callback={chooseElementButtonPressed} />
+        } 
+        {screenName === 'Game Screen' &&
+          <GameScreen 
+            playerOneElementColor={playerOneElementColor}
+            computerElementColor={computerElementColor}
+            disabledButtons={disabledButtons}
+            computerCharacterTypeText={computerCharacterTypeText}
+            computerElementalBonusText={computerElementalBonusText}
+            playerOneCharacterTypeText={playerOneCharacterTypeText}
+            playerOneElementalBonusText={playerOneElementalBonusText}
+            winLooseTieText={winLooseTieText}
+            buttonsAndExplanationsDivDisplay={buttonsAndExplanationsDivDisplay}
+            newGameButtonDisplay={newGameButtonDisplay}
+            playerOneHealth={playerOneHealth}
+            computerHealth={computerHealth}
+            playerOneElement={playerOneElement}
+            computerElement={computerElement}
+            playerOneChoice={playerOneChoice}
+            computerChoice={computerChoice}
+            playerOneCharacterType={playerOneCharacterType}
+            computerCharacterType={computerCharacterType}
+            callback={gameButtonOrNewGameButtonPressed} 
+          />
+        }
       </div>
     </main>
   );

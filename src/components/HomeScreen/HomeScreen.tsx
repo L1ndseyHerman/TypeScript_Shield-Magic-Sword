@@ -9,13 +9,10 @@ interface Props {
 
 const HomeScreen: React.FC<Props> = (props: Props) => {
     return(
-        <main>   
-        <div id="outermostDiv">
-          <h1>Shield-Magic-Sword</h1>
-          <BeginGameButton callback={props.callback} />
-          <BottomNotes />
-        </div>
-      </main>
+      <>
+        <BeginGameButton callback={props.callback} />
+        <BottomNotes />
+      </>
     );
 };
     
