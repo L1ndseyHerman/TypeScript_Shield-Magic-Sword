@@ -5,8 +5,10 @@ const BottomNotes: React.FC = () => {
         //  This is a "fragment", for if you don't want yet another div around a component.
         <>
             <p>
-                Starting version 4.4, which will be shortening/changing the code slightly 
-                based on what I&apos;ve learned from the first half of the Udemy course.
+                Finished version 4.4, which invovled shortening the &quot;screen&quot; code 
+                that chooses whether &quot;Charater Type Selection Screen&quot; or 
+                &quot;Element Selection Screen&quot;, etc. displays, as well as 
+                no longer having some duplicate code for all four screens.
             </p>
             <p>
                 Updates will be slow for awhile, as I&apos;m also watching a 

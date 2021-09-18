@@ -148,14 +148,7 @@ const checkWinLooseTie = (playerOneHealth: number, computerHealth: number) => {
 }
 
 const App: React.FC = () => {
-  //  I would like to condense these useStates into a playerOne class useState and a 
-  //  computer class useState, but I have some useEffects that only change when 
-  //  three states change, and I think they would update anytime anything in the object 
-  //  does, right? Like I want a useState to get called when playerOneHealth changes, but 
-  //  not when playerOneCharaterType changes, but I think if they were in the same object,
-  //  the useEffect would get called when either one changes?
 
-  //  Reordered these const/variables a little to be kind of in order of the screens they happen on? 
   const [screenName, setScreenName] = useState("Shield-Magic-Sword");
 
   const [playerOneCharacterType, setPlayerOneCharacterType] = useState("None Yet");
@@ -293,18 +286,10 @@ const App: React.FC = () => {
   }, [screenName])
 
   useEffect(() => {
-      //  Since there didn't use to be a choice, client may have previous localStorage data
-      //  that needs to be cleared.
-      localStorage.removeItem("playerOneHealth");
-      localStorage.removeItem("computerHealth");
-      localStorage.removeItem("lastComputerChoice");
-
       sessionStorage.setItem("playerOneHealth", String(playerOneHealth));
       sessionStorage.setItem("computerHealth", String(computerHealth));
       sessionStorage.setItem("lastComputerChoice", computerChoice);
 
-      //  New! TechWithTim said this makes the useEffect() only run when the variables 
-      //  you put in this array change, instead of all the variables.
 }, [computerChoice, computerHealth, playerOneHealth])
 
   const beginGameButtonPressed = (beginGameButtonSettings: {screenName: string}) => {
@@ -344,10 +329,6 @@ const App: React.FC = () => {
     setDisabledButtons(currentGameOrNewGameSettings.disabledButtons); 
     setScreenName(currentGameOrNewGameSettings.screenName);
   }
-
-  //  I'm just doing these statements in order, so the "if" is the first screen when 
-  //  the website loads/the browser refreshes, then the "else if" is the next "page", then the 
-  //  next "else if" is the next one, etc. 
 
   return (
     <main>   
