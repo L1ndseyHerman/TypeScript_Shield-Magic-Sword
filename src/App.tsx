@@ -348,28 +348,65 @@ const App: React.FC = () => {
   //  I'm just doing these statements in order, so the "if" is the first screen when 
   //  the website loads/the browser refreshes, then the "else if" is the next "page", then the 
   //  next "else if" is the next one, etc. 
-  if (screenName === "Shield-Magic-Sword")
+
+  return (
+    <>
+      {screenName === 'Shield-Magic-Sword' && 
+        <HomeScreen callback={beginGameButtonPressed} />
+      }
+      {screenName === 'Character Type Selection Screen' &&
+       <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
+      }
+      {screenName === 'Element Selection Screen' &&
+        <ElementSelectionScreen callback={chooseElementButtonPressed} />
+      } 
+      {screenName === 'Game Screen' &&
+        <GameScreen 
+          playerOneElementColor={playerOneElementColor}
+          computerElementColor={computerElementColor}
+          disabledButtons={disabledButtons}
+          computerCharacterTypeText={computerCharacterTypeText}
+          computerElementalBonusText={computerElementalBonusText}
+          playerOneCharacterTypeText={playerOneCharacterTypeText}
+          playerOneElementalBonusText={playerOneElementalBonusText}
+          winLooseTieText={winLooseTieText}
+          buttonsAndExplanationsDivDisplay={buttonsAndExplanationsDivDisplay}
+          newGameButtonDisplay={newGameButtonDisplay}
+          playerOneHealth={playerOneHealth}
+          computerHealth={computerHealth}
+          playerOneElement={playerOneElement}
+          computerElement={computerElement}
+          playerOneChoice={playerOneChoice}
+          computerChoice={computerChoice}
+          playerOneCharacterType={playerOneCharacterType}
+          computerCharacterType={computerCharacterType}
+          callback={gameButtonOrNewGameButtonPressed} 
+        />
+      }
+    </>
+  );
+  /*if (screenName === "Shield-Magic-Sword")
   {
     return (
       <HomeScreen callback={beginGameButtonPressed} />
     );
-  }
+  }*/
 
-  else if (screenName === "Character Type Selection Screen")
+  /*else if (screenName === "Character Type Selection Screen")
   {
     return (
       <CharacterTypeSelectionScreen callback={chooseCharacterTypeButtonPressed} />
     );
-  }
+  }*/
 
-  else if (screenName === "Element Selection Screen")
+  /*else if (screenName === "Element Selection Screen")
   {
     return (
       <ElementSelectionScreen callback={chooseElementButtonPressed} />
     );
-  }
+  }*/
 
-  else if (screenName === "Game Screen")
+  /*else if (screenName === "Game Screen")
   {
     return (
       <GameScreen 
@@ -394,7 +431,7 @@ const App: React.FC = () => {
         callback={gameButtonOrNewGameButtonPressed} 
       />
     );
-  }
+  }*/
 
   //  This should never return, means there's an error.
   return (
